@@ -1,4 +1,7 @@
 ﻿using System.Web.Http;
+using Sample.Services;
+using Unity;
+using Unity.Lifetime;
 
 namespace Sample
 {
@@ -7,6 +10,9 @@ namespace Sample
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+            var container = new UnityContainer();
+            container.RegisterType<ValuesService>(new ContainerControlledLifetimeManager());
+            config.DependencyResolver = new UnityResolver(container);
 
             // Web API routes
             config.MapHttpAttributeRoutes();
