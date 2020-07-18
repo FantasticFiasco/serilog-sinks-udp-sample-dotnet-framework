@@ -16,11 +16,11 @@ namespace Sample.Controllers
             valuesService.GetAll();
 
         // POST api/values
-        public void Post([FromBody]string value) =>
-            valuesService.Add(value);
+        public void Post(string id) =>
+            valuesService.Add(id);
 
         // DELETE api/values/5
-        public void Delete(string value) =>
-            valuesService.Remove(value);
+        public void Delete(string id) =>
+            valuesService.Remove(id);
     }
 }
