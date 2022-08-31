@@ -35,6 +35,7 @@ What you will end up with is a console application producing log events displaye
 1. Open `dotnet-framework-sample.sln` is Visual Studio
 1. Right-click on project _web-api-sample_ and select _Set As StartUp Project_
 1. Press _F5_ to start debugging
+1. Using a web server, navigate to the endpoints exposed by `ValuesController`
 
 What you will end up with is a web API application hosted in IIS Express producing log events displayed in Log2Console.
 
